@@ -5,8 +5,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Games"
         mc:Ignorable="d"
-        Title="CustomDifficulty" Height="450" Width="800">
+        Title="CustomDifficulty" Height="200" Width="200" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid>
+        <!-- Width controls: -->
+        <Label Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               VerticalContentAlignment="Center">Width:</Label>
+        <TextBox Name="width" Margin="30,0" Width="70" Height="40" HorizontalAlignment="Right" 
+                 VerticalAlignment="Top" TextAlignment="Center" Text="8" VerticalContentAlignment="Center" TextChanged="Width_OnTextChanged"></TextBox>
+        <Button Name="upperW" Height="20" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" 
+                VerticalContentAlignment="Top" Click="Upper_OnClick">^</Button>
+        <Button Name="lowerW" Margin="0, 20, 0, 0" Height="20" Width="30" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" FontSize="15" VerticalContentAlignment="Center" Click="Lower_OnClick">v</Button>
         
+        <!-- Height controls: -->
+        <Label Margin="0, 40, 0, 0" Width="100" Height="40" HorizontalAlignment="Left" 
+               VerticalAlignment="Top" VerticalContentAlignment="Center">Height:</Label>
+        <TextBox Name="height" Margin="0, 40, 30, 0" Width="70" Height="40" HorizontalAlignment="Right" 
+                 VerticalAlignment="Top" TextAlignment="Center" Text="8" VerticalContentAlignment="Center" TextChanged="Height_OnTextChanged"></TextBox>
+        <Button Name="upperH" Margin="0, 40, 0, 0" Height="20" Width="30" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" FontSize="20" VerticalContentAlignment="Top" Click="UpperH_OnClick">^</Button>
+        <Button Name="lowerH" Margin="0, 60, 0, 0" Height="20" Width="30" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" FontSize="15" VerticalContentAlignment="Center" Click="LowerH_OnClick">v</Button>
+        
+        <!-- Height controls: -->
+        <Label Margin="0, 80, 0, 0" Width="100" Height="40" HorizontalAlignment="Left" 
+               VerticalAlignment="Top" VerticalContentAlignment="Center">Bombs:</Label>
+        <TextBox Name="bombs" Margin="0, 80, 30, 0" Width="70" Height="40" HorizontalAlignment="Right" 
+                 VerticalAlignment="Top" TextAlignment="Center" Text="10" VerticalContentAlignment="Center" TextChanged="Bombs_OnTextChanged"  ></TextBox>
+        <Button Name="upperB" Margin="0, 80, 0, 0" Height="20" Width="30" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" FontSize="20" VerticalContentAlignment="Top" Click="UpperB_OnClick">^</Button>
+        <Button Name="lowerB" Margin="0, 100, 0, 0" Height="20" Width="30" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" FontSize="15" VerticalContentAlignment="Center" Click="LowerB_OnClick">v</Button>
+         
+        <Button Name="Save" VerticalAlignment="Bottom" Margin="10, 10" Width="50" Click="Save_OnClick">Save</Button>
     </Grid>
 </Window>

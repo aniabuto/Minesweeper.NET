@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Games"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Minesweeper" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
     <Grid>
-
+        <!-- <Button Height="50" Width="100" BorderBrush="Black" BorderThickness="5" ToolTip="Hey!" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial" FontSize="25" Click="ButtonBase_OnClick">MENU</Button> -->
+        <Menu VerticalAlignment="Top" Height="20">
+            <MenuItem Header="_Menu" HorizontalContentAlignment="Right" Name="menu">
+                <MenuItem Header="_Beginner" Name="Beginner" Click="Beginner_OnClick"></MenuItem>
+                <MenuItem Header="_Intermediate" Name = "Intermediate" Click="Intermediate_OnClick"></MenuItem>
+                <MenuItem Header="_Expert" Name="Expert" Click="Expert_OnClick"></MenuItem>
+                <MenuItem Header="_Custom" Name="CustomLevel" Click="CustomLevel_OnClick"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <Grid Name="Options" Height="50" Margin="0, 20" VerticalAlignment="Top">
+            <Label Name="BombCounter" Width="100" HorizontalAlignment="Center" Background="Black" Foreground="Red" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontSize="37">10</Label>
+            <Button Name="RestartButton" Background="Yellow" Width="45" Height="45" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="ButtonBase_OnClick">🙂</Button>
+            <Label Name="Timer" Width="100" HorizontalAlignment="Center" Background="Black" Foreground="Red" 
+                   HorizontalContentAlignment="Right" VerticalContentAlignment="Top" FontSize="37">0</Label>
+        </Grid>
+        
+        <Grid Name="mineField" Margin="10, 70, 10, 10">
+            
+            
+        </Grid>
+        
     </Grid>
 </Window>
